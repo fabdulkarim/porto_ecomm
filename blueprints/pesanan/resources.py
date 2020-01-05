@@ -3,7 +3,7 @@ from flask_restful import Api, reqparse, Resource, marshal, inputs
 from sqlalchemy import desc
 
 from flask_jwt_extended import jwt_required, get_jwt_claims #lupa
-from blueprints import user_required
+from blueprints import user_required, admin_required
 
 from datetime import datetime
 
@@ -138,8 +138,54 @@ class DoTransaction(Resource):
 
         return order_marshal, 200
 
+# class GetHistory(Resource):
+    @jwt_required
+    @user_required
+    def get(self):
+        user_id = get_jwt_claims()['user_id']
+
+        qry = Orders.query
+        qry = qry.filter_by(user_id=user_id)
+
+        rows = []
+        for que in qry:
+            rows.append(marshal(que, Orders.response_fields))
+
+        return rows, 200
+
+class AdminTransact(Resource):
+    @jwt_required
+    @admin_required
+    def put(self, id):
+        qry = Orders.query.get(id)
+
+        parser = reqparse.RequestParser()
+        parser.add_argument('transaksi', location='json', required=True)
+        
+        args = parser.parse_args()
+
+        if qry is None:
+            return {'status': 'NOT_FOUND'}, 404
+        qry.transaksi = args['transaksi']
+        qry.updated_at = db.func.now()
+        db.session.commit()
+
+        return marshal(qry, Orders.response_fields), 200
+
+    @jwt_required
+    @admin_required
+    def get(self):
+        qry = Orders.query.all()
+
+        rows = []
+        for que in qry:
+            rows.append(marshal(que, Orders.response_fields))
+
+        return rows, 200
+
 api.add_resource(CartEdit, '/cart', '/cart/<int:id>')
-api.add_resource(DoTransaction, '/buynow')
+api.add_resource(DoTransaction, '/buynow','/buynow/<int:id>')
+api.add_resource(AdminTransact, '/internal_trans','/internal_trans/<int:id>')
 
 
     

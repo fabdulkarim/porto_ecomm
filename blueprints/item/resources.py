@@ -53,7 +53,7 @@ class ItemEditAdmin(Resource):
         parser.add_argument('name', location='json', required=True)
         parser.add_argument('price', location='json', required=True)
         parser.add_argument('photo', location='json', required=True)
-        parser.add_argument('status', location='json', required=True)
+        parser.add_argument('status', location='json', type=bool, required=True)
 
 
         args = parser.parse_args()

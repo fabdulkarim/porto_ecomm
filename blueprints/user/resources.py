@@ -34,7 +34,7 @@ class UserEdit(Resource):
         parser.add_argument('email', location='json', required=True)
         parser.add_argument('password', location='json', required=True)
         parser.add_argument('alamat_kirim', location='json', required=True)
-        parser.add_argument('status', location='json', required=True)
+        parser.add_argument('status', location='json', type=bool, required=True)
 
         args = parser.parse_args()
 
@@ -71,38 +71,6 @@ class UserEdit(Resource):
         db.session.commit()
 
         return {'message': 'deleted'}, 200
-
-    @jwt_required
-    @admin_required
-    def post(self):
-
-        policy = PasswordPolicy.from_names(
-            length=6
-        )
-
-        parser = reqparse.RequestParser()
-        parser.add_argument('username', location='json', required=True)
-        parser.add_argument('email', location='json', required=True)
-        parser.add_argument('password', location='json', required=True)
-        
-        args = parser.parse_args()
-
-        validation = policy.test(args['password'])
-
-        if validation == []:
-            password_digest = hashlib.md5(args['password'].encode()).hexdigest()
-            
-            user = Users(args['username'], args['email'], password_digest)
-
-            try:
-                db.session.add(user)
-                db.session.commit()
-            except:
-                return {'status':'failed','message':'conflicting database'}, 409, {'Content-Type':'application/json'}
-            app.logger.debug('DEBUG : %s', user)
-
-            return marshal(user, Users.response_fields), 200, {'Content-Type': 'application/json'}
-        return {'status': 'failed', 'result': str(validation)}, 400, {'Content-Type': 'application/json'}
     
     @jwt_required
     @admin_required
