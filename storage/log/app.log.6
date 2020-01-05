@@ -1,0 +1,100 @@
+[2020-01-05 17:56:27,352] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
+Traceback (most recent call last):
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 105, in post
+    price_count += item_marshal['price'] * args['quantity'][item_id]
+TypeError: unsupported operand type(s) for +=: 'int' and 'str'
+[2020-01-05 17:56:27,356] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": {"1": 1, "2": 1}, "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
+[2020-01-05 17:57:26,190] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
+Traceback (most recent call last):
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 105, in post
+    price_count += int(item_marshal['price']) * int(args['quantity'][item_id])
+ValueError: invalid literal for int() with base 10: "'"
+[2020-01-05 17:57:26,193] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": {"1": 1, "2": 1}, "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
+[2020-01-05 18:00:41,993] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
+Traceback (most recent call last):
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 106, in post
+    price_count += int(item_marshal['price']) * int(args['quantity'][item_id])
+ValueError: invalid literal for int() with base 10: "'"
+[2020-01-05 18:00:41,996] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": {"1": 1, "2": 1}, "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
+[2020-01-05 18:01:15,724] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
+Traceback (most recent call last):
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 106, in post
+    price_count += item_marshal['price'] * int(args['quantity'][item_id])
+ValueError: invalid literal for int() with base 10: "'"
+[2020-01-05 18:01:15,727] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": {"1": 1, "2": 1}, "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
+[2020-01-05 18:09:46,921] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
+Traceback (most recent call last):
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 96, in post
+    list_pair.append((item_quant['id'],item_quant['quant']))
+TypeError: string indices must be integers
+[2020-01-05 18:09:46,924] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": [{"id": 1, "quant": 1}, {"id": 2, "quant": 1}], "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}

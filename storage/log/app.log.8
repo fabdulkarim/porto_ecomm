@@ -1,0 +1,51 @@
+[2020-01-05 13:50:11,770] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:79} INFO - REQUEST_LOG	{"status_code": 200, "request": {"username": "fadhil", "email": "fadhil@fadhil.com", "password": "coba12", "alamat_kirim": "Jl. Tidar no.23"}, "response": {"user_id": 1, "username": "fadhil", "email": "fadhil@fadhil.com", "alamat_kirim": "Jl. Tidar no.23", "status": true, "created_at": "2020-01-05 13:50:11", "updated_at": null}}
+[2020-01-05 13:51:27,450] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/auth/__init__.py", line 35, in post
+    token = create_access_token(identity=args['client_key'], user_claims=clientData)
+KeyError: 'client_key'
+[2020-01-05 13:51:27,452] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"username": "fadhil", "password": "coba12"}, "response": {"message": "Internal Server Error"}}
+[2020-01-05 13:52:41,401] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:79} INFO - REQUEST_LOG	{"status_code": 200, "request": {"username": "fadhil", "password": "coba12"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzgyMDcxNjEsIm5iZiI6MTU3ODIwNzE2MSwianRpIjoiMWI1MmYxMmYtZGY3ZS00NzVhLTlmOWMtZGNlMWI5Y2I2Y2E5IiwiZXhwIjoxNTc4MjkzNTYxLCJpZGVudGl0eSI6ImZhZGhpbCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7InVzZXJfaWQiOjEsImlzYWRtaW4iOmZhbHNlfX0.64wWf5ak_3_naFiA1COJ75Zm2xVGfnG7bzbJKHT2O4I"}}
+[2020-01-05 13:54:29,375] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /daftar [PUT]
+Traceback (most recent call last):
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/user/resources.py", line 168, in put
+    id = get_jwt_claims().user_id
+AttributeError: 'dict' object has no attribute 'user_id'
+[2020-01-05 13:54:29,378] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"username": "fadhil", "email": "fadhil@fadhil.com", "password": "coba13", "alamat_kirim": "Jl. Tidar no.23"}, "response": {"message": "Internal Server Error"}}
+[2020-01-05 13:55:16,994] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:79} INFO - REQUEST_LOG	{"status_code": 200, "request": {"username": "fadhil", "email": "fadhil@fadhil.com", "password": "coba13", "alamat_kirim": "Jl. Tidar no.23"}, "response": {"user_id": 1, "username": "fadhil", "email": "fadhil@fadhil.com", "alamat_kirim": "Jl. Tidar no.23", "status": true, "created_at": "2020-01-05 13:50:11", "updated_at": "2020-01-05 13:55:16"}}
+[2020-01-05 13:55:33,835] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 401, "request": {"username": "fadhil", "password": "coba12"}, "response": {"status": "UNAUTHORIZED", "message": "invalid key or secret"}}
+[2020-01-05 13:55:42,215] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:79} INFO - REQUEST_LOG	{"status_code": 200, "request": {"username": "fadhil", "password": "coba13"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzgyMDczNDIsIm5iZiI6MTU3ODIwNzM0MiwianRpIjoiNjI0M2Y0OGItNDIzYy00YjMwLTkxODAtY2RkNzY3YmJiMDg1IiwiZXhwIjoxNTc4MjkzNzQyLCJpZGVudGl0eSI6ImZhZGhpbCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7InVzZXJfaWQiOjEsImlzYWRtaW4iOmZhbHNlfX0.uwl_sHdAj7lF4ygbleE5V4G4TclesLekLZPZB7ZHhdY"}}
+[2020-01-05 15:52:37,092] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:79} INFO - REQUEST_LOG	{"status_code": 200, "request": {"username": "admin", "password": "admin"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzgyMTQzNTcsIm5iZiI6MTU3ODIxNDM1NywianRpIjoiOGFlODMwYzctYTg0NS00ZTQ5LWI1MmYtNzZkMmI0MjE1MGQ4IiwiZXhwIjoxNTc4MzAwNzU3LCJpZGVudGl0eSI6ImFkbWluIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIiwidXNlcl9jbGFpbXMiOnsiaXNhZG1pbiI6dHJ1ZX19.MoRxrO0q-kAIlj7vDOmBHUmnIi3maAHmmZtaCm6W7mI"}}
+[2020-01-05 15:53:13,983] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:79} INFO - REQUEST_LOG	{"status_code": 200, "request": {"username": "admin", "password": "admin"}, "response": [{"user_id": 1, "username": "fadhil", "email": "fadhil@fadhil.com", "alamat_kirim": "Jl. Tidar no.23", "status": true, "created_at": "2020-01-05 13:50:11", "updated_at": "2020-01-05 13:55:16"}]}
+[2020-01-05 15:54:50,248] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 404, "request": {"name": "Kyrie 5", "price": 1300000, "photo": "https://photo.yupoo.com/huayi5198888/79769e71/22d35ca0.jpeg"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-01-05 15:55:39,544] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:79} INFO - REQUEST_LOG	{"status_code": 200, "request": {"name": "Kyrie 5", "price": 1300000, "photo": "https://photo.yupoo.com/huayi5198888/79769e71/22d35ca0.jpeg"}, "response": {"item_id": 1, "name": "Kyrie 5", "price": "1300000", "purchased": "0", "photo": "https://photo.yupoo.com/huayi5198888/79769e71/22d35ca0.jpeg", "status": true, "created_at": "2020-01-05 15:55:39", "updated_at": null}}
+[2020-01-05 15:56:32,056] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:79} INFO - REQUEST_LOG	{"status_code": 200, "request": {}, "response": [{"item_id": 1, "name": "Kyrie 5", "price": "1300000", "purchased": "0", "photo": "https://photo.yupoo.com/huayi5198888/79769e71/22d35ca0.jpeg", "status": true, "created_at": "2020-01-05 15:55:39", "updated_at": null}]}
+[2020-01-05 15:57:08,928] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:79} INFO - REQUEST_LOG	{"status_code": 200, "request": {}, "response": [{"item_id": 1, "name": "Kyrie 5", "price": 1300000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/79769e71/22d35ca0.jpeg", "status": true, "created_at": "2020-01-05 15:55:39", "updated_at": null}]}
+[2020-01-05 16:38:51,337] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:79} INFO - REQUEST_LOG	{"status_code": 200, "request": {"username": "fadhil", "password": "coba13"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzgyMTcxMzEsIm5iZiI6MTU3ODIxNzEzMSwianRpIjoiMmU5NWI0MWEtMjIwNy00MTQ5LTg1ODgtMjYxZDNjYjJlMzc1IiwiZXhwIjoxNTc4MzAzNTMxLCJpZGVudGl0eSI6ImZhZGhpbCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7InVzZXJfaWQiOjEsImlzYWRtaW4iOmZhbHNlfX0.eAb2gS_FIGJTV8Y2tTeCrHJrkE7R54kq7ADHZDVY_Ow"}}
+[2020-01-05 16:39:14,453] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:79} INFO - REQUEST_LOG	{"status_code": 200, "request": {}, "response": [{"item_id": 1, "name": "Kyrie 5", "price": 1300000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/79769e71/22d35ca0.jpeg", "status": true, "created_at": "2020-01-05 15:55:39", "updated_at": null}]}
+[2020-01-05 16:44:30,731] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:79} INFO - REQUEST_LOG	{"status_code": 200, "request": {"item_id": 1}, "response": {"user_id": 1, "item_id": 1, "status": true, "created_at": "2020-01-05 16:44:30", "updated_at": null}}
+[2020-01-05 16:45:06,449] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:79} INFO - REQUEST_LOG	{"status_code": 200, "request": {}, "response": [{"user_id": 1, "item_id": 1, "status": true, "created_at": "2020-01-05 16:44:30", "updated_at": null}]}

@@ -1,0 +1,80 @@
+[2020-01-05 18:19:33,880] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
+Traceback (most recent call last):
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 99, in post
+    list_pair.append((int(item_quant['id']),int(item_quant['quant'])))
+TypeError: string indices must be integers
+[2020-01-05 18:19:33,883] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": [{"id": 1, "quant": 1}, {"id": 2, "quant": 1}], "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
+[2020-01-05 18:20:48,276] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
+Traceback (most recent call last):
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 98, in post
+    item_quant = dict(item_quant)
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+[2020-01-05 18:20:48,280] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": [{"id": 1, "quant": 1}, {"id": 2, "quant": 1}], "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
+[2020-01-05 20:32:02,229] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
+Traceback (most recent call last):
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 116, in post
+    order = Orders(user_id,price_count)
+TypeError: __init__() missing 1 required positional argument: 'alamat_kirim'
+[2020-01-05 20:32:02,232] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": [{"id": 1, "quant": 1}, {"id": 2, "quant": 1}], "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
+[2020-01-05 20:32:44,497] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
+Traceback (most recent call last):
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 116, in post
+    order = Orders(user_id,price_count,args['alamat_kirim'])
+TypeError: __init__() missing 1 required positional argument: 'alamat_kirim'
+[2020-01-05 20:32:44,498] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": [{"id": 1, "quant": 1}, {"id": 2, "quant": 1}], "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
