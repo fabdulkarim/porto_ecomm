@@ -51,7 +51,7 @@ class Orders(db.Model):
 
     def __init__(self, user_id, total_price, alamat_kirim): 
         self.user_id = user_id
-        self.transaksi = "ORDER MASUK"
+        self.transaksi = "ORDER PLACED"
         self.total_price = total_price
         self.alamatkirim = alamat_kirim
         self.status = True

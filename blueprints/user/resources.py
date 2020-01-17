@@ -154,6 +154,22 @@ class UserSignUp(Resource):
             return marshal(qry, Users.response_fields), 200
         return {'status': 'failed', 'result': str(validation)}, 400, {'Content-Type': 'application/json'}
 
+    @jwt_required
+    @user_required
+    def get(self):
+        id = get_jwt_claims()['user_id']
+
+        qry = Users.query.get(id)
+        if qry is None:
+            return {'status': 'NOT_FOUND'}, 404
+
+        return marshal(qry, Users.response_fields), 200
+        
+
+
+    def options(self):
+        return {}, 200
+
 
 api.add_resource(UserEdit, '/internal_user', '/internal_user/<int:id>')
 api.add_resource(UserSignUp, '/daftar')

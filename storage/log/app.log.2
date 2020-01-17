@@ -1,29 +1,12 @@
-[2020-01-05 20:40:02,915] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
-Traceback (most recent call last):
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
-    cursor, statement, parameters, context
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 581, in do_execute
-    cursor.execute(statement, parameters)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.InternalError: (1054, "Unknown column 'alamatkirim' in 'field list'")
-
-The above exception was the direct cause of the following exception:
-
+[2020-01-17 09:35:19,797] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"user_id": 2, "username": "uhadi", "email": "uhadi@litmail.id", "alamat_kirim": "Jl. Suka Senang V no.27 Bandung", "status": true, "created_at": "2020-01-13 22:32:46", "updated_at": "2020-01-16 17:40:06"}}
+[2020-01-17 09:35:30,302] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
+[2020-01-17 09:35:30,312] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": [{"id": 10, "user_id": 2, "item_id": 2, "status": true, "created_at": "2020-01-17 08:05:16", "updated_at": null}, {"id": 11, "user_id": 2, "item_id": 1, "status": true, "created_at": "2020-01-17 09:35:11", "updated_at": null}]}
+[2020-01-17 09:35:30,340] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"item_id": 2, "name": "Don 1", "price": 1000000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/1530576b/48848301.jpeg", "status": true, "created_at": "2020-01-05 23:09:43", "updated_at": null}}
+[2020-01-17 09:35:30,358] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"item_id": 1, "name": "Kyrie 5", "price": 1300000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/79769e71/22d35ca0.jpeg", "status": true, "created_at": "2020-01-05 23:09:43", "updated_at": "2020-01-05 23:09:43"}}
+[2020-01-17 09:35:43,532] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
+[2020-01-17 09:35:43,547] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"user_id": 2, "username": "uhadi", "email": "uhadi@litmail.id", "alamat_kirim": "Jl. Suka Senang V no.27 Bandung", "status": true, "created_at": "2020-01-13 22:32:46", "updated_at": "2020-01-16 17:40:06"}}
+[2020-01-17 09:35:51,393] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
+[2020-01-17 09:35:51,398] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
 Traceback (most recent call last):
   File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
@@ -35,74 +18,42 @@ Traceback (most recent call last):
     return self.dispatch_request(*args, **kwargs)
   File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 118, in post
-    db.session.commit()
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
-    self.transaction.commit()
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
-    self._prepare_impl()
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
-    self.session.flush()
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2479, in flush
-    self._flush(objects)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2617, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
-    raise value
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2577, in _flush
-    flush_context.execute()
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
-    rec.execute(self)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
-    uow,
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
-    insert,
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1137, in _emit_insert_statements
-    statement, params
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 982, in execute
-    return meth(self, multiparams, params)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
-    distilled_params,
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
-    e, statement, parameters, cursor, context
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
-    util.raise_from_cause(sqlalchemy_exception, exc_info)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
-    raise value.with_traceback(tb)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
-    cursor, statement, parameters, context
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 581, in do_execute
-    cursor.execute(statement, parameters)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-sqlalchemy.exc.InternalError: (pymysql.err.InternalError) (1054, "Unknown column 'alamatkirim' in 'field list'")
-[SQL: INSERT INTO `order` (user_id, transaksi, total_price, alamatkirim, status, updated_at) VALUES (%(user_id)s, %(transaksi)s, %(total_price)s, %(alamatkirim)s, %(status)s, %(updated_at)s)]
-[parameters: {'user_id': 1, 'transaksi': 'ORDER MASUK', 'total_price': 2300000, 'alamatkirim': 'Jalan Tidar no.23', 'status': 1, 'updated_at': None}]
-(Background on this error at: http://sqlalche.me/e/2j85)
-[2020-01-05 20:40:02,927] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": [{"id": 1, "quant": 1}, {"id": 2, "quant": 1}], "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 107, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
+    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
+    raise NoAuthorizationError(errors[0])
+flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
+[2020-01-17 09:35:51,404] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:86} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": [{"id": "01", "quant": "1"}, {"id": "11", "quant": ","}, {"id": "21", "quant": "2"}], "alamat_kirim": "Jl. Suka Senang V no.27 Bandung"}, "response": {"message": "Internal Server Error"}}
+[2020-01-17 09:46:32,023] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
+[2020-01-17 09:46:32,052] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"user_id": 2, "username": "uhadi", "email": "uhadi@litmail.id", "alamat_kirim": "Jl. Suka Senang V no.27 Bandung", "status": true, "created_at": "2020-01-13 22:32:46", "updated_at": "2020-01-16 17:40:06"}}
+[2020-01-17 09:48:46,680] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
+[2020-01-17 09:48:46,693] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": [{"id": 10, "user_id": 2, "item_id": 2, "status": true, "created_at": "2020-01-17 08:05:16", "updated_at": null}, {"id": 11, "user_id": 2, "item_id": 1, "status": true, "created_at": "2020-01-17 09:35:11", "updated_at": null}]}
+[2020-01-17 09:48:46,787] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"item_id": 2, "name": "Don 1", "price": 1000000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/1530576b/48848301.jpeg", "status": true, "created_at": "2020-01-05 23:09:43", "updated_at": null}}
+[2020-01-17 09:48:46,839] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"item_id": 1, "name": "Kyrie 5", "price": 1300000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/79769e71/22d35ca0.jpeg", "status": true, "created_at": "2020-01-05 23:09:43", "updated_at": "2020-01-05 23:09:43"}}
+[2020-01-17 09:48:54,767] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
+[2020-01-17 09:48:54,778] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"user_id": 2, "username": "uhadi", "email": "uhadi@litmail.id", "alamat_kirim": "Jl. Suka Senang V no.27 Bandung", "status": true, "created_at": "2020-01-13 22:32:46", "updated_at": "2020-01-16 17:40:06"}}
+[2020-01-17 09:49:05,859] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
+[2020-01-17 09:49:05,865] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
+Traceback (most recent call last):
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 107, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
+    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
+  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
+    raise NoAuthorizationError(errors[0])
+flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
+[2020-01-17 09:49:05,866] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:86} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": [{"id": "01", "quant": 2}, {"id": "11", "quant": 1}], "alamat_kirim": "Jl. Suka Senang V no.27 Bandung"}, "response": {"message": "Internal Server Error"}}
+[2020-01-17 09:50:27,197] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
+[2020-01-17 09:50:27,270] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"user_id": 2, "username": "uhadi", "email": "uhadi@litmail.id", "alamat_kirim": "Jl. Suka Senang V no.27 Bandung", "status": true, "created_at": "2020-01-13 22:32:46", "updated_at": "2020-01-16 17:40:06"}}

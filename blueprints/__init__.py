@@ -11,8 +11,11 @@ from flask_jwt_extended import JWTManager, verify_jwt_in_request, get_jwt_claims
 
 from flask_script import Manager
 
+#using flask-cors to solve all the problems?
+from flask_cors import CORS
 
 app = Flask(__name__) # app.root location
+CORS(app)
 
 #jwt secret, generated from random.org
 app.config['JWT_SECRET_KEY'] = '6ICWahMFm9V5nienF4KUil2yrUgoapOe'

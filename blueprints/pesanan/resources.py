@@ -37,9 +37,6 @@ class CartEdit(Resource):
         for row in qry:
             rows.append(marshal(row, Carts.response_fields))
 
-        if len(rows) == 0:
-            return {'message':'You have no Items in Cart'}, 200, {'Content-Type': 'application/json'}
-
         return rows, 200
 
     @jwt_required
@@ -77,6 +74,9 @@ class CartEdit(Resource):
 
         return {'message': 'deleted'}, 200
 
+    def options(self, *args, **kwargs):
+        return {}, 200
+        
 class DoTransaction(Resource):
     @jwt_required
     @user_required
@@ -120,6 +120,10 @@ class DoTransaction(Resource):
             item_id = marsh['item_id']
             detail = Details(order_marshal['id'], item_id, dict_item_quant[item_id])
             db.session.add(detail)
+
+            #modify item, add purchased
+            it_qry = Items.query.get(item_id)
+            it_qry.purchased += dict_item_quant[item_id]
             
             #delete cart item
             qry3 = Carts.query
@@ -134,6 +138,7 @@ class DoTransaction(Resource):
             qry3.status = False
             qry3.updated_at = db.func.now()
             #commit for both details and cart delete
+            ##added adding for purchased, commit included in below
             db.session.commit()
 
         return order_marshal, 200
@@ -152,6 +157,9 @@ class DoTransaction(Resource):
             rows.append(marshal(que, Orders.response_fields))
 
         return rows, 200
+
+    def options(self):
+        return {}, 200
 
 class AdminTransact(Resource):
     @jwt_required
@@ -184,7 +192,7 @@ class AdminTransact(Resource):
         return rows, 200
 
 api.add_resource(CartEdit, '/cart', '/cart/<int:id>')
-api.add_resource(DoTransaction, '/buynow','/buynow/<int:id>')
+api.add_resource(DoTransaction, '/buynow')
 api.add_resource(AdminTransact, '/internal_trans','/internal_trans/<int:id>')
 
 

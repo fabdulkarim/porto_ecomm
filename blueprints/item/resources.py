@@ -3,7 +3,7 @@ from flask_restful import Api, reqparse, Resource, marshal, inputs
 from sqlalchemy import desc
 
 from flask_jwt_extended import jwt_required #lupa
-from blueprints import admin_required
+from blueprints import admin_required, user_required
 
 from datetime import datetime
 
@@ -85,4 +85,32 @@ class ItemEditAdmin(Resource):
 
         return {'message': 'deleted'}, 200
 
+class PublicItem(Resource):
+    def get(self):
+        
+        qry = Items.query.all()
+
+        if qry is None:
+            return {'status': 'NOT_FOUND'}, 404
+
+        return marshal(qry, Items.response_fields), 200
+
+    def options(self):
+        return {}, 200
+
+class PublicGetSpecific(Resource):
+    def get(self,id):
+        
+        qry = Items.query.get(id)
+
+        if qry is None:
+            return {'status': 'NOT_FOUND'}, 404
+
+        return marshal(qry, Items.response_fields), 200
+
+    def options(self):
+        return {}, 200
+
 api.add_resource(ItemEditAdmin, '/internal/<int:id>','/internal')
+api.add_resource(PublicItem, '')
+api.add_resource(PublicGetSpecific, '/<int:id>')

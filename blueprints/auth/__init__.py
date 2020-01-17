@@ -38,6 +38,9 @@ class CreateTokenResource(Resource):
             ##### fasilitas dari flask
             return {'token': token}, 200
         return {'status': 'UNAUTHORIZED', 'message': 'invalid key or secret'}, 401
+    
+    def options(self):
+        return {}, 200
 
     @jwt_required
     def get(self):

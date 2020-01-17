@@ -1,4 +1,4 @@
-[2020-01-05 17:56:27,352] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
+[2020-01-17 08:01:03,656] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /cart/9 [OPTIONS]
 Traceback (most recent call last):
   File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
@@ -10,15 +10,13 @@ Traceback (most recent call last):
     return self.dispatch_request(*args, **kwargs)
   File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 105, in post
-    price_count += item_marshal['price'] * args['quantity'][item_id]
-TypeError: unsupported operand type(s) for +=: 'int' and 'str'
-[2020-01-05 17:56:27,356] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": {"1": 1, "2": 1}, "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
-[2020-01-05 17:57:26,190] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
+TypeError: options() got an unexpected keyword argument 'id'
+[2020-01-17 08:01:03,660] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:86} ERROR - REQUEST_LOG	{"status_code": 500, "request": null, "response": {"message": "Internal Server Error"}}
+[2020-01-17 08:01:14,784] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
+[2020-01-17 08:01:14,796] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": [{"id": 8, "user_id": 2, "item_id": 1, "status": true, "created_at": "2020-01-16 19:19:40", "updated_at": null}, {"id": 9, "user_id": 2, "item_id": 2, "status": true, "created_at": "2020-01-16 22:34:41", "updated_at": null}]}
+[2020-01-17 08:01:14,966] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"item_id": 1, "name": "Kyrie 5", "price": 1300000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/79769e71/22d35ca0.jpeg", "status": true, "created_at": "2020-01-05 23:09:43", "updated_at": "2020-01-05 23:09:43"}}
+[2020-01-17 08:01:15,047] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"item_id": 2, "name": "Don 1", "price": 1000000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/1530576b/48848301.jpeg", "status": true, "created_at": "2020-01-05 23:09:43", "updated_at": null}}
+[2020-01-17 08:01:21,726] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /cart/9 [OPTIONS]
 Traceback (most recent call last):
   File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
@@ -30,15 +28,13 @@ Traceback (most recent call last):
     return self.dispatch_request(*args, **kwargs)
   File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 105, in post
-    price_count += int(item_marshal['price']) * int(args['quantity'][item_id])
-ValueError: invalid literal for int() with base 10: "'"
-[2020-01-05 17:57:26,193] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": {"1": 1, "2": 1}, "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
-[2020-01-05 18:00:41,993] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
+TypeError: options() got an unexpected keyword argument 'id'
+[2020-01-17 08:01:21,727] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:86} ERROR - REQUEST_LOG	{"status_code": 500, "request": null, "response": {"message": "Internal Server Error"}}
+[2020-01-17 08:03:49,107] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
+[2020-01-17 08:03:49,129] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": [{"id": 8, "user_id": 2, "item_id": 1, "status": true, "created_at": "2020-01-16 19:19:40", "updated_at": null}, {"id": 9, "user_id": 2, "item_id": 2, "status": true, "created_at": "2020-01-16 22:34:41", "updated_at": null}]}
+[2020-01-17 08:03:49,280] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"item_id": 1, "name": "Kyrie 5", "price": 1300000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/79769e71/22d35ca0.jpeg", "status": true, "created_at": "2020-01-05 23:09:43", "updated_at": "2020-01-05 23:09:43"}}
+[2020-01-17 08:03:49,351] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"item_id": 2, "name": "Don 1", "price": 1000000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/1530576b/48848301.jpeg", "status": true, "created_at": "2020-01-05 23:09:43", "updated_at": null}}
+[2020-01-17 08:03:53,061] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /cart/8 [OPTIONS]
 Traceback (most recent call last):
   File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
@@ -50,51 +46,15 @@ Traceback (most recent call last):
     return self.dispatch_request(*args, **kwargs)
   File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 106, in post
-    price_count += int(item_marshal['price']) * int(args['quantity'][item_id])
-ValueError: invalid literal for int() with base 10: "'"
-[2020-01-05 18:00:41,996] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": {"1": 1, "2": 1}, "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
-[2020-01-05 18:01:15,724] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
-Traceback (most recent call last):
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 106, in post
-    price_count += item_marshal['price'] * int(args['quantity'][item_id])
-ValueError: invalid literal for int() with base 10: "'"
-[2020-01-05 18:01:15,727] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": {"1": 1, "2": 1}, "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
-[2020-01-05 18:09:46,921] {/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /buynow [POST]
-Traceback (most recent call last):
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/portoecomm/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py", line 43, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/pesanan/resources.py", line 96, in post
-    list_pair.append((item_quant['id'],item_quant['quant']))
-TypeError: string indices must be integers
-[2020-01-05 18:09:46,924] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:83} ERROR - REQUEST_LOG	{"status_code": 500, "request": {"quantity": [{"id": 1, "quant": 1}, {"id": 2, "quant": 1}], "alamat_kirim": "Jalan Tidar no.23"}, "response": {"message": "Internal Server Error"}}
+TypeError: options() got an unexpected keyword argument 'id'
+[2020-01-17 08:03:53,065] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:86} ERROR - REQUEST_LOG	{"status_code": 500, "request": null, "response": {"message": "Internal Server Error"}}
+[2020-01-17 08:05:02,193] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
+[2020-01-17 08:05:02,214] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": [{"id": 8, "user_id": 2, "item_id": 1, "status": true, "created_at": "2020-01-16 19:19:40", "updated_at": null}, {"id": 9, "user_id": 2, "item_id": 2, "status": true, "created_at": "2020-01-16 22:34:41", "updated_at": null}]}
+[2020-01-17 08:05:02,331] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"item_id": 1, "name": "Kyrie 5", "price": 1300000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/79769e71/22d35ca0.jpeg", "status": true, "created_at": "2020-01-05 23:09:43", "updated_at": "2020-01-05 23:09:43"}}
+[2020-01-17 08:05:02,411] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"item_id": 2, "name": "Don 1", "price": 1000000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/1530576b/48848301.jpeg", "status": true, "created_at": "2020-01-05 23:09:43", "updated_at": null}}
+[2020-01-17 08:05:05,206] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
+[2020-01-17 08:05:05,236] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {"message": "deleted"}}
+[2020-01-17 08:05:13,207] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": [{"item_id": 1, "name": "Kyrie 5", "price": 1300000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/79769e71/22d35ca0.jpeg", "status": true, "created_at": "2020-01-05 23:09:43", "updated_at": "2020-01-05 23:09:43"}, {"item_id": 2, "name": "Don 1", "price": 1000000, "purchased": 0, "photo": "https://photo.yupoo.com/huayi5198888/1530576b/48848301.jpeg", "status": true, "created_at": "2020-01-05 23:09:43", "updated_at": null}]}
+[2020-01-17 08:05:16,585] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
+[2020-01-17 08:05:16,612] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": {"item_id": 2}, "response": {"id": 10, "user_id": 2, "item_id": 2, "status": true, "created_at": "2020-01-17 08:05:16", "updated_at": null}}
+[2020-01-17 08:05:18,567] {/home/alta14/Desktop/AltA/porto_ecomm/myapparel/blueprints/__init__.py:82} INFO - REQUEST_LOG	{"status_code": 200, "request": null, "response": {}}
