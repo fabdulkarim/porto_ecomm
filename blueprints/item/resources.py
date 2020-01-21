@@ -88,7 +88,9 @@ class ItemEditAdmin(Resource):
 class PublicItem(Resource):
     def get(self):
         
-        qry = Items.query.all()
+        qry = Items.query.filter_by(status=True)
+
+        qry = qry.all()
 
         if qry is None:
             return {'status': 'NOT_FOUND'}, 404
@@ -101,7 +103,9 @@ class PublicItem(Resource):
 class PublicGetSpecific(Resource):
     def get(self,id):
         
-        qry = Items.query.get(id)
+        qry = Items.query.filter_by(status=True).filter_by(item_id=id)
+
+        qry = qry.first()
 
         if qry is None:
             return {'status': 'NOT_FOUND'}, 404
