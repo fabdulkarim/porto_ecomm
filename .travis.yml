@@ -29,3 +29,4 @@ after_script:
 - ssh -v -i deploy.rsa $SSH_USER@$SSH_IP DIR=$ROOT_DIR  'bash -s' < deploy.sh
 #komen tes
 #komen tes2
+#komen tes re-install
