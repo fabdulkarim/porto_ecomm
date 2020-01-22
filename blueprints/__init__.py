@@ -17,11 +17,12 @@ from flask_cors import CORS
 app = Flask(__name__) # app.root location
 CORS(app)
 
+##disabling loading .env
 #fadhil using dotenv for not hard-coding database URL
-from dotenv import load_dotenv
-from pathlib import Path  # python3 only
-env_path = Path('.') / '.env'
-load_dotenv(dotenv_path=env_path)
+#from dotenv import load_dotenv
+#from pathlib import Path  # python3 only
+#env_path = Path('.') / '.env'
+#load_dotenv(dotenv_path=env_path)
 
 #jwt secret, generated from random.org
 app.config['JWT_SECRET_KEY'] = '6ICWahMFm9V5nienF4KUil2yrUgoapOe'
