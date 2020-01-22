@@ -66,7 +66,7 @@ def user_required(fn):
 ##### HARUS DI ATAS ##########
 
 app.config['APP_DEBUG'] = True
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{}:{}@{}:{}/{}'.format(os.getenv("DATABASE_USER"),os.getenv("DATABASE_PASSWORD"),os.getenv("DATABASE_HOST"),os.getenv("DATABASE_PORT"),os.getenv("DATABASE_NAME"))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{}:{}@{}/{}'.format(os.getenv("DATABASE_USER"),os.getenv("DATABASE_PASSWORD"),os.getenv("DATABASE_HOST_PORT"),os.getenv("DATABASE_NAME"))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
