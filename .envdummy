@@ -1,0 +1,8 @@
+#.env file sesuai yang dikasih mas Vian
+#this file shouldnt appear to git
+
+DATABASE_USER = "DBUSER"
+DATABASE_PASSWORD = "DBPASS"
+DATABASE_URL = "DBURL"
+DATABASE_NAME = "DBNAME"
+

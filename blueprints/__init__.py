@@ -17,12 +17,13 @@ from flask_cors import CORS
 app = Flask(__name__) # app.root location
 CORS(app)
 
+###reenabling using substitute on .yaml
 ##disabling loading .env
 #fadhil using dotenv for not hard-coding database URL
-#from dotenv import load_dotenv
-#from pathlib import Path  # python3 only
-#env_path = Path('.') / '.env'
-#load_dotenv(dotenv_path=env_path)
+from dotenv import load_dotenv
+from pathlib import Path  # python3 only
+env_path = Path('.') / '.envdummy'
+load_dotenv(dotenv_path=env_path)
 username = os.getenv('DATABASE_USER')
 password = os.getenv('DATABASE_PASSWORD')
 hostport = os.getenv('DATABASE_URL')

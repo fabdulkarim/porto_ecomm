@@ -5,10 +5,10 @@ os:
 - linux
 env:
   global:
-  - DATABASE_USER={$DATABASE_USER}
-  - DATABASE_PASSWORD={$DATABASE_PASSWORD}
-  - DATABASE_URL={$DATABASE_URL}
-  - DATABASE_NAME={$DATABASE_NAME}
+  #- DATABASE_USER={$DATABASE_USER}
+  #- DATABASE_PASSWORD={$DATABASE_PASSWORD}
+  #- DATABASE_URL={$DATABASE_URL}
+  #- DATABASE_NAME={$DATABASE_NAME}
   - DOCKER_IMAGE_NAME="portofolio"
   - DOCKER_HUB_ORG="fabdulkarim"
 before_install:
@@ -20,6 +20,10 @@ before_install:
 script:
 - sudo chmod +x deploy.sh
 - sudo chmod 600 deploy.rsa
+- sed -i -e 's|DBUSER|'"${DATABASE_USER}"'|g' .envdummy
+- sed -i -e 's|DBPASS|'"${DATABASE_PASSWORD}"'|g' .envdummy
+- sed -i -e 's|DBURL|'"${DATABASE_URL}"'|g' .envdummy
+- sed -i -e 's|DBNAME|'"${DATABASE_NAME}"'|g' .envdummy
 after_script:
 - docker build -t ${DOCKER_HUB_ORG}/${DOCKER_IMAGE_NAME}:backend-${TRAVIS_BUILD_ID} .
 - docker push ${DOCKER_HUB_ORG}/${DOCKER_IMAGE_NAME}:backend-${TRAVIS_BUILD_ID}
