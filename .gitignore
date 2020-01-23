@@ -1,3 +1,4 @@
+#edited for travis
 # Created by https://www.gitignore.io/api/python,flask,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=python,flask,visualstudiocode
 
@@ -170,3 +171,10 @@ dmypy.json
 .history
 
 # End of https://www.gitignore.io/api/python,flask,visualstudiocode
+
+### deploy preparation
+.env
+
+### travis
+#deploy.rsa
+#deploy.rsa.pub

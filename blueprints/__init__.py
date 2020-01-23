@@ -17,6 +17,18 @@ from flask_cors import CORS
 app = Flask(__name__) # app.root location
 CORS(app)
 
+##disabling loading .env
+#fadhil using dotenv for not hard-coding database URL
+#from dotenv import load_dotenv
+#from pathlib import Path  # python3 only
+#env_path = Path('.') / '.env'
+#load_dotenv(dotenv_path=env_path)
+username = os.getenv('DATABASE_USER')
+password = os.getenv('DATABASE_PASSWORD')
+hostport = os.getenv('DATABASE_URL')
+name = os.getenv('DATABASE_NAME')
+
+
 #jwt secret, generated from random.org
 app.config['JWT_SECRET_KEY'] = '6ICWahMFm9V5nienF4KUil2yrUgoapOe'
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(days=1)
@@ -59,7 +71,8 @@ def user_required(fn):
 ##### HARUS DI ATAS ##########
 
 app.config['APP_DEBUG'] = True
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:JalanTidarno.23@localhost:3306/portoecommDB'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{db_user}:{db_pass}@{db_host_port}/{db_name}'.format(db_user=username,db_pass=password,db_host_port=hostport,db_name=name)
+##.format(os.getenv("DATABASE_USER"),os.getenv("DATABASE_PASSWORD"),os.getenv("DATABASE_HOST_PORT"),os.getenv("DATABASE_NAME"))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)

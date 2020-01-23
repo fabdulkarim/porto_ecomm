@@ -20,7 +20,7 @@ class CreateTokenResource(Resource):
 
         if args['username'] == 'admin' and args['password'] == 'admin':
             token = create_access_token(identity=args['username'], user_claims={'isadmin':True})
-            return {'token': token}, 200
+            return {'token': token, 'is_admin':'true'}, 200
 
         password_digest = hashlib.md5(args['password'].encode()).hexdigest()
 
