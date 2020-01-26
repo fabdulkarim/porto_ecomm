@@ -16,6 +16,7 @@ class TestCartUser():
 
         assert res.status_code == 200
 
+
     def test_cart_add(self,client):
         token = create_token_nonint()
 
@@ -37,6 +38,9 @@ class TestCartUser():
         token = create_token_nonint()
 
         req = call_client(request)
+        res_op = req.options('/cart/1',
+            headers={'Authorization': 'Bearer ' + token}
+        )
         res = req.delete('/cart/1',
             headers={'Authorization': 'Bearer ' + token}
         )
@@ -109,6 +113,9 @@ class TestInfoOrder():
         token = create_token_nonint()
 
         req = call_client(request)
+        res = req.options('/buynow',
+            headers={'Authorization': 'Bearer ' + token}
+        )
         res = req.get('/buynow',
             headers={'Authorization': 'Bearer ' + token}
         )

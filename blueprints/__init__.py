@@ -23,6 +23,9 @@ CORS(app)
 from dotenv import load_dotenv
 from pathlib import Path  # python3 only
 env_path = Path('.') / '.envdummy'
+#local
+#env_path = Path('.') / '.env'
+
 load_dotenv(dotenv_path=env_path)
 username = os.getenv('DATABASE_USER')
 password = os.getenv('DATABASE_PASSWORD')

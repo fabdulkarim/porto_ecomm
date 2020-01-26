@@ -72,6 +72,19 @@ class TestUserCrud():
 
         assert res.status_code == 200
 
+    def test_user_get_data(self,client):
+        token = create_token_nonint()
+
+        req = call_client(request)
+        res_op = req.options('/daftar',
+            headers={'Authorization': 'Bearer ' + token}
+        )
+        res = req.get('/daftar',
+            headers={'Authorization': 'Bearer ' + token}
+        )
+
+        assert res.status_code == 200
+
     def test_user_update(self, client):
         token = create_token_nonint()
 
@@ -92,6 +105,27 @@ class TestUserCrud():
         res_json = json.loads(res.data)
 
         assert res.status_code == 200
+
+    def test_user_update_weakpass(self, client):
+        token = create_token_nonint()
+
+        data = {
+            'username': 'mbaknya',
+            'email': 'jhs@starlight.com',
+            'password': 'scr',
+            'alamat_kirim': 'Jl. Simp. Taman Agung no.17, kamar Atas Tengah, bareng Fadhil'
+        }
+
+        req = call_client(request)
+        res = req.put('/daftar',
+            json=data,
+            headers={'Authorization': 'Bearer ' + token}
+
+        )
+
+        res_json = json.loads(res.data)
+
+        assert res.status_code == 400
 
     def test_user_wrongaccount(self, client):
         token = create_token()

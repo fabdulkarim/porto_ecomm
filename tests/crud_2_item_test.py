@@ -64,3 +64,34 @@ class TestItemCRUD():
         res_json = json.loads(res.data)
 
         assert res.status_code == 200
+
+    def test_item_public_getall(self, client):
+
+        req = call_client(request)
+        res_op = req.options('/item')
+        res = req.get('/item')
+
+        res_json = json.loads(res.data)
+
+        assert res.status_code == 200
+
+    def test_item_public_specific(self,client):
+
+        req = call_client(request)
+        res_op = req.options('/item/1')
+
+        res = req.get('/item/1')
+
+        res_json = json.loads(res.data)
+
+        assert res.status_code == 200
+
+    def test_item_public_not_exist(self,client):
+
+        req = call_client(request)
+
+        res = req.get('/item/4')
+
+        res_json = json.loads(res.data)
+
+        assert res.status_code == 404

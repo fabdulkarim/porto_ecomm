@@ -112,7 +112,7 @@ class PublicGetSpecific(Resource):
 
         return marshal(qry, Items.response_fields), 200
 
-    def options(self):
+    def options(self,id):
         return {}, 200
 
 api.add_resource(ItemEditAdmin, '/internal/<int:id>','/internal')
